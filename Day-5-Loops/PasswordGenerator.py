@@ -12,7 +12,17 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
+#storing password value to concantenate
 new_password = ''
+
+# random.choice returns a randome element in a list
 for letter in range(nr_letters): 
   new_password += random.choice(letters)
-print(new_password)
+
+for number in range(nr_numbers):
+  new_password += random.choice(numbers)
+
+for symbole in range(nr_symbols):
+  new_password += random.choice(symbols)
+
+print(f'New password: {new_password}')
