@@ -26,3 +26,24 @@ for symbole in range(nr_symbols):
   new_password += random.choice(symbols)
 
 print(f'New password: {new_password}')
+
+#Hard Level - Order of characters randomised:
+#e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
+randomized_password = []
+for letter in range(nr_letters): 
+  randomized_password.append(random.choice(letters))
+
+for number in range(nr_numbers):
+  randomized_password.append(random.choice(numbers))
+
+for symbole in range(nr_symbols):
+  randomized_password.append(random.choice(symbols))
+
+random.shuffle(randomized_password)
+
+password = ''
+for char in randomized_password:
+  password += char
+
+print(f'New randomized password: {password}')
