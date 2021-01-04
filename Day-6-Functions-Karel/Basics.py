@@ -65,3 +65,25 @@ for num in range(6):
 #will loop until jump is equal to at_goal()
 while not at_goal():
     jump()
+
+
+# 6- 3 randomized hurdle jumping
+def turn_around():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+def jump():
+    turn_left()
+    move()
+    turn_around()
+    move()
+    turn_around()
+    move()
+    turn_left()
+    
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
